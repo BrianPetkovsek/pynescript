@@ -397,7 +397,7 @@ class Unparser(NodeVisitor):
         "BitOr": "|",
         "BitXor": "^",
         "BitAnd": "&",
-        "FloorDiv": "//",
+        "DivFloor": "//",
         "Pow": "**",
         "Equal": "==",
         "NotEqual": "!=",
@@ -521,6 +521,9 @@ class Unparser(NodeVisitor):
 
     def visit_Div(self, node):
         self.write("/")
+
+    def visit_DivFloor(self, node):
+        self.write("//")
 
     def visit_Mod(self, node):
         self.write("%")

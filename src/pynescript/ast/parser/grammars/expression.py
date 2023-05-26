@@ -12,6 +12,7 @@ from pynescript.ast.parser.tokens import COLON
 from pynescript.ast.parser.tokens import COMMA
 from pynescript.ast.parser.tokens import CONSTANT
 from pynescript.ast.parser.tokens import DIV
+from pynescript.ast.parser.tokens import DIVFLOOR
 from pynescript.ast.parser.tokens import EQ
 from pynescript.ast.parser.tokens import GE
 from pynescript.ast.parser.tokens import GT
@@ -87,6 +88,7 @@ unary_expression <<= unary_expression_pattern | primary_expression
 multiplicative_operator = (
     ConvertToNode(ast.Mult)(MUL)
     | ConvertToNode(ast.Div)(DIV)
+    | ConvertToNode(ast.DivFloor)(DIVFLOOR)
     | ConvertToNode(ast.Mod)(MOD)
 )
 

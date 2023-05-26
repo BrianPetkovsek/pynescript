@@ -216,6 +216,8 @@ class Mult(AST):
 class Div(AST):
     pass
 
+class DivFloor(AST):
+    pass
 
 class Mod(AST):
     pass
@@ -226,6 +228,7 @@ BinaryOperator = Union[
     Sub,
     Mult,
     Div,
+    DivFloor,
     Mod,
 ]
 
@@ -238,6 +241,7 @@ AugAssignOperator = Union[
     Colon,
     Mult,
     Div,
+    DivFloor,
     Mod,
     Add,
     Sub,

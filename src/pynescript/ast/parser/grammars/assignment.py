@@ -9,6 +9,7 @@ from pynescript.ast.parser.tokens import ADD
 from pynescript.ast.parser.tokens import ASSIGN
 from pynescript.ast.parser.tokens import COLON
 from pynescript.ast.parser.tokens import DIV
+from pynescript.ast.parser.tokens import DIVFLOOR
 from pynescript.ast.parser.tokens import IDENTIFIER
 from pynescript.ast.parser.tokens import MOD
 from pynescript.ast.parser.tokens import MUL
@@ -50,6 +51,7 @@ aug_assignment_operator = (
     ConvertToNode(ast.Colon)(COLON)
     | ConvertToNode(ast.Mult)(MUL)
     | ConvertToNode(ast.Div)(DIV)
+    | ConvertToNode(ast.DivFloor)(DIVFLOOR)
     | ConvertToNode(ast.Mod)(MOD)
     | ConvertToNode(ast.Add)(ADD)
     | ConvertToNode(ast.Sub)(SUB)
